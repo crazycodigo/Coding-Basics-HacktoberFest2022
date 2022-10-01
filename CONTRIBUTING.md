@@ -16,6 +16,8 @@ Follow these steps to make a successful PR:
 3. Merge your branch to main and PR to this repo.
 4. In your PR description, be sure to include screenshots that prove that your code works. You are also encouraged to give a small description of your code / doc.
 
+**NOTE:** If you are making a PR for an open issue, first comment and ask the maintainers to assign it to you. 
+
 ## Reporting bugs
 If you see a bug, you can report create an issue to report it. You may also fix the bug and raise a PR. 
 
