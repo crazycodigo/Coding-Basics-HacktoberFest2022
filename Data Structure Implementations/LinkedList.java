@@ -1,5 +1,3 @@
-package com.Slash;  // This is basically the folder our code belongs to.
-
 public class LinkedList {
 
     private Node head;  // Reference variable pointing to nodes.
