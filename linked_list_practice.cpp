@@ -100,14 +100,14 @@ void traversing(node *new9){
 
 
 int main(){
-    // int p;
-    // cout<<"Enter the number of elements you wanna enter";
-    // cin>>p;
-    // linked_list_creation(p);
-    // traversing();
+     int p;
+     cout<<"Enter the number of elements you wanna enter";
+     cin>>p;
+     linked_list_creation(p);
+     traversing();
 
-    // insertion_at_beginning(70,"Henlo");
-    // insertion_at_end(99,"beatem");
-    // insertion_at_index(69,"NOO",3);
+     insertion_at_beginning(70,"Henlo");
+     insertion_at_end(99,"beatem");
+     insertion_at_index(69,"NOO",3);
     
 }
