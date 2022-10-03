@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Keto Mario</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1>keto mario</h1>
+    </div>
+    <div class="score">
+        score :
+    </div>
+    <div class="wrapper">
+        <div class="game">
+            <img id="img1" src="./assets/stars.png">
+            <img id="img2" src="./assets/stars.png">
+            <img src="./assets/mario.png" class="player" />
+            <img src="./assets/cactus.png" class="block" />
+
+            <!-- </div> -->
+            <!-- <div class="block">
+            </div> -->
+        </div>
+        <div class="end"><a href="javascript:location.reload(true)">
+                <p>PLAY</p>
+            </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const player = document.querySelector('.player');
+        const block = document.querySelector('.block');
+        const score = document.querySelector('.score');
+        const game = document.querySelector('.game');
+        const end = document.querySelector('.end');
+        const stars1 = document.querySelector('#img1');
+        const stars2 = document.querySelector('#img2');
+
+        const t1 = new TimelineMax();
+
+        start();
+
+        window.addEventListener('keydown', (e) => {
+            if (player.classList.contains('animate')) {
+                pass;
+            }
+            else {
+                if (e.keyCode === 32) {
+                    player.classList.add('animate');
+                    setTimeout(() => {
+                        player.classList.remove('animate');
+                    }, 500);
+                }
+            }
+        });
+
+        const dead = setInterval(() => {
+            const charTop = parseInt(window.getComputedStyle(player).getPropertyValue('top'));
+            const charHeight = parseInt(window.getComputedStyle(player).getPropertyValue('height'));
+            const blo = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
+            // const charRight = parseInt(window.getComputedStyle(player).getPropertyValue('right'));
+            const charLeft = parseInt(window.getComputedStyle(player).getPropertyValue('left'));
+
+            // console.log(charTop, blo);
+            if (blo >= charLeft && blo <= charLeft + 20 && charTop >= 350) {
+
+                // game.classList.add('transform');
+                // end.classList.add('block1');
+
+                const endTimeCalculated = calcTime();
+
+                setTimeout(() => {
+                    end.style.display = 'block';
+                    score.style.display = 'block';
+                    game.style.display = 'none';
+                    // t1.fromTo(end,.5, {height: '0%'}, {height: '100%', ease: Power2.easeInOut})
+                }, 2100);
+
+                t1.fromTo(game, .5, { height: '100%' }, { height: '0%', ease: Power2.easeInOut })
+                    // .fromTo(game,.5, {y: 0}, {y: -100, ease: Power2.easeInOut})
+                    .fromTo(game, .5, { width: '100%' }, { width: '0%', ease: Power2.easeInOut });
+
+
+
+                block.style.display = 'none';
+                stars2.style.display = 'none';
+                stars1.style.display = 'none';
+                player.style.display = 'none';
+
+
+                document.querySelector('.score').innerHTML = `Score: ${endTimeCalculated}s`;
+
+            }
+        }, 10);
+
+        let i = 0.1;
+
+        const level = setInterval(() => {
+            block.style.animationDuration = `${2 - i}s`;
+            i += 0.1;
+        }, 10000)
+
+        let j = 5;
+
+        const level2 = setInterval(() => {
+            block.style.width = `${40 + i}px`;
+            i += 5;
+        }, 10000)
+
+        end.addEventListener('onClick', () => {
+            location.reload(true);
+        })
+
+        var startTime, endTime;
+
+        function start() {
+            startTime = new Date();
+        };
+
+        function calcTime() {
+            endTime = new Date();
+            var timeDiff = endTime - startTime;
+            timeDiff /= 1000;
+            return timeDiff;
+        }
+    </script>
+</body>
+
+
+</html>
