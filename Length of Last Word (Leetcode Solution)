@@ -1,0 +1,13 @@
+let val = 0 
+    let hasChar = false
+    for(let i = s.length - 1; i > -1; i--) {
+        if(s[i] === ' ' && hasChar) {
+            return val
+        }
+        else if (s[i] !== ' '){
+            val = val + 1
+            hasChar = true
+        }
+    }
+    return val
+};
