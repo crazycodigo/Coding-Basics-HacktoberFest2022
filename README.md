@@ -30,3 +30,5 @@ You can choose any basic coding problem or mini project that you want and contri
 
 ## How to contribute?
 Read the instructions in CONTRIBUTING.md to understand how contributions to this repo work. 
+
+Do read the guidelines thoroughly and follow them. Otherwise, your PR will be labelled as spam.
