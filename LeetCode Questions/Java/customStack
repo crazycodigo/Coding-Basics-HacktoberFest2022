@@ -1,0 +1,105 @@
+import java.util.Scanner;
+
+class stack{
+    public  Integer arr[];
+    public static int DEFAULT_SIZE;
+    int pointer=-1;
+
+    stack(int size){
+        this.arr=new Integer[size];
+    }
+
+  
+    public void push(int num){
+        if(isFull()){
+            System.out.println("Stack is full");
+            return;
+        }
+        this.pointer++;
+        arr[pointer]=num;
+    }
+    public void pop(){
+        if(isEmpty()){
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Popped element is "+arr[pointer]);
+        pointer--;
+       
+    }
+    public int peek(){
+        return arr[pointer];
+    }
+
+    public void display(){
+        int temp=pointer;
+        while(temp!=-1){
+            System.out.println(arr[temp]);
+            temp--;
+        }
+    }
+    public boolean isEmpty(){
+        if(pointer==-1){
+            return true;
+        }
+        return false;
+    }
+    public boolean isFull()
+    {
+        if(pointer==arr.length-1)
+        {
+            
+            return true;
+        }
+        return false;
+    }
+}
+
+
+
+public class stackUsingArray {
+    public static void main(String[] args) {
+       
+        Scanner s =new Scanner(System.in);
+        int choice;
+        System.out.printf("\n\t 1.PUSH\n\t 2.POP\n\t 3.DISPLAY\n\t 4.EXIT");
+        stack st= new stack(5);
+        do
+        {
+            System.out.println("\n Enter the Choice:");
+             choice=s.nextInt();
+            switch(choice)
+            {
+                case 1:
+                {
+                    System.out.println("Enter a value");
+                    int val=s.nextInt();
+                    st.push(val);
+                    break;
+                }
+                case 2:
+                {
+                    st.pop();
+                    break;
+                }
+                case 3:
+                {
+                    st.display();
+                    break;
+                }
+                case 4:
+                {
+                    System.out.println("\n\t EXIT POINT ");
+                    break;
+                }
+                default:
+                {
+                    System.out.println("\n\t Please Enter a Valid Choice(1/2/3/4)");
+                }
+                    
+            }
+        }
+        while(choice!=4);
+        s.close();
+    }
+}
