@@ -7,6 +7,10 @@ android {
     namespace 'com.caioiox.diceapp'
     compileSdk 32
 
+    viewBinding {
+        enable = true
+    }
+
     defaultConfig {
         applicationId "com.caioiox.diceapp"
         minSdk 21
