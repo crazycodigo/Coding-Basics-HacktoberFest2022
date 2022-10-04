@@ -1,12 +1,13 @@
-# Coding-Basics-HacktoberFest2022
+# Coding Basics Hacktober_Fest_2022 :
+
 This repository accepts contributions for HacktoberFest 2022.
 
-## What is HacktoberFest 2022?
+## What is HacktoberFest 2022 ?
 ![hactoberfest](https://user-images.githubusercontent.com/91965754/193397762-a6fb07b8-3657-4a28-b051-e91d41a27494.png)
 
 HacktoberFest is an open-source festival for coders and designers who are interested in growing communities and repositories. By making contributions to HacktoberFest, you can expand your knowledge about open-source and earn some amazing badges and swags. 
 
-## What does this repo do?
+## What does this repo do ?
 This repository accepts code contributions for:
 
 - any basic fundamentals of coding (any language is accepted)
@@ -16,7 +17,7 @@ This repository accepts code contributions for:
 
 Its aim is to make a comprehensive guide to coding and solve basic problems that may be faced by other newbies. 
 
-## Problem Statements
+## Problem Statements :
 You can choose any basic coding problem or mini project that you want and contribute it. However, if you want some inspiration, take a look at these:
 
 - [LeetCode Problems]([url](https://leetcode.com/problemset/algorithms/))
@@ -28,7 +29,8 @@ You can choose any basic coding problem or mini project that you want and contri
 - JWT in Go
 - JWT in Node
 
-## How to contribute?
+## How to contribute ?
+
 Read the instructions in CONTRIBUTING.md to understand how contributions to this repo work. 
 
 Do read the guidelines thoroughly and follow them. Otherwise, your PR will be labelled as spam.
