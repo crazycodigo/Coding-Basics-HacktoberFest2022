@@ -1,0 +1,5 @@
+To find out how fast you type, just start typing in the blank textbox on the right of the test prompt. You will see your progress, including errors on the left side as you type.
+
+You can fix errors as you go, or correct them at the end with the help of the spell checker. If you need to restart the test, delete the text in the text box. Interactive feedback shows you your current wpm and accuracy.
+
+In order to complete the test and share your results, you need to get 100% accuracy. You can review your progress for this session with the feedback chart. Just hover over a dot to see what your average speed and accruacy are for that key.
