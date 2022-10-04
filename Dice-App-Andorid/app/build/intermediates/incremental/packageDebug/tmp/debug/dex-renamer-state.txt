@@ -1,0 +1,13 @@
+#Mon Oct 03 20:55:18 BRT 2022
+path.3=7/classes.dex
+path.2=10/classes.dex
+path.1=0/classes.dex
+path.0=classes.dex
+base.3=C\:\\Users\\zeroa\\OneDrive\\Documentos\\GitHub\\Coding-Basics-HacktoberFest2022\\Dice-App-Andorid\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.2=C\:\\Users\\zeroa\\OneDrive\\Documentos\\GitHub\\Coding-Basics-HacktoberFest2022\\Dice-App-Andorid\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.1=C\:\\Users\\zeroa\\OneDrive\\Documentos\\GitHub\\Coding-Basics-HacktoberFest2022\\Dice-App-Andorid\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\zeroa\\OneDrive\\Documentos\\GitHub\\Coding-Basics-HacktoberFest2022\\Dice-App-Andorid\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex

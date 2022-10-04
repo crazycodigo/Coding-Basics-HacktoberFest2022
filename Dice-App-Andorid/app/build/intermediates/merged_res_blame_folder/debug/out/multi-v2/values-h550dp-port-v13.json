@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.caioiox.diceapp-mergeDebugResources-24:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\zeroa\\.gradle\\caches\\transforms-3\\bf2460cae264fae0218b9941ebdc9497\\transformed\\material-1.5.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "76",
+                        "endOffsets": "127"
+                    }
+                }
+            ]
+        }
+    ]
+}

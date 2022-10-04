@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.caioiox.diceapp-mergeDebugResources-25:/layout/activity_main.xml",
+        "source": "com.caioiox.diceapp-main-28:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\zeroa\\.gradle\\daemon\\7.4\\com.caioiox.diceapp-mergeDebugResources-25:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\zeroa\\.gradle\\daemon\\7.4\\com.caioiox.diceapp-main-28:\\layout\\activity_main.xml"
+    }
+]
