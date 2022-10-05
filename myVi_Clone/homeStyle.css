@@ -1,0 +1,188 @@
+@import url(./homeUtilities.css);
+
+/* general css classes */
+.mtb{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+
+/* nav bar */
+.nav-main{
+    /* border: 2px solid red; */
+    color: var(--black);
+}
+
+.nav-left{
+    /* border: 2px solid blue; */
+    /* width: 25%; */
+}
+/* right nav */
+.nav-right{
+    /* border: 2px solid blue; */
+    padding: 10px 0px 10px 0px;
+}
+
+.nav-right a{
+    color: var(--black);
+}
+
+/* center nav */
+.nav-center{
+    padding: 10px 0px 10px 0px;
+}
+.nav-center a{
+    color: var(--black);
+}
+
+/* latest info */
+.latest{
+    background-color: red;
+    color: var(--white);    
+    /* padding: 1px 0px 0px 0px; */
+}
+
+.latest p{
+    line-height: 12px;
+    padding: 10px 0px 0px 0px;
+}
+.latest p a{
+    margin-left: 100px;
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* main sections */
+/* sec-01 */
+
+/* sec-01 left */
+.sec-01-l{
+    border: var(--b-red);
+
+}
+
+.sec-l-head{
+    /* font-family: "Helvetica","Arial",sans-serif; */
+    font-family: var(--font);
+    font-weight: bolder;
+    font-size: 36px;
+    line-height: 38px;
+    margin: 93px 0 0 0;
+}
+
+/* button */
+.input-group-btn button{
+    transform: translate(-90px, 8px);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.input-group-btn{
+    z-index: 10 !important;
+}
+/* sec-01 r */
+.sec-01-r{
+    border: var(--b-blue);
+
+}
+
+/* sec-02 */
+
+.sec-02{
+    border: var(--b-blue);
+}
+
+/* sec-03 */
+
+.sec-03{
+    border: var(--b-blue);
+}
+
+/* main head */
+.sec-03-head a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.sec-03-head a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+/* card img */
+.card-body-img{
+    flex-direction: row-reverse;
+}
+
+.card-body-img img{
+    margin: 0 0 0 -15px;
+}
+
+/* card text link animate */
+.card-body-03>a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.card-body-03 a:hover{
+    /* color: var(--black); */
+    text-decoration: underline;
+}
+
+/* card button */
+.card-body-03 span>a:hover{
+    text-decoration: none;
+    background: linear-gradient(to left,#f1525f 50%,#ee2737 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out !important;
+}
+
+.cb3-btn{
+    border-radius: 100px 100px;
+    background-color: var(--red);
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+/* main card */
+.sec3-card{
+    width: 23rem;
+
+}
+.card{
+    border: none;
+}
+
+.main-card{
+    margin: 25px 0 25px 0;
+}
+
+/* browse btn */
+.browse-btn{
+    border: 1px solid var(--black);
+    width: 10rem;
+    cursor: pointer;
+    border-radius: 100px;
+    justify-content: center;
+    padding: 13px 10px;
+    background-color: var(--white);
+}
+
+.browse-btn-main:hover{
+    background: linear-gradient(to left, var(--black) 50%, var(--white) 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition: all 0.5s ease-out !important;
+    color: var(--white);
+}
+
+
