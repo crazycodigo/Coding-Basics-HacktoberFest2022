@@ -1,57 +1,61 @@
+import java.util.*;
 
-import java.util.Arrays;
+public class QuickSort{
 
-public class quickSort {
-    public static void main(String[] args) {
-        int arr[]={10,2,5,1};
-        int n=arr.length;
-        sort(arr,0,n-1);
-        System.out.println(Arrays.toString(arr));
-        
+  static int partition(int arr[], int low , int high){
+    int pivot = arr[low]  ;
+    int i = low ;
+    int j = high ;
+
+    while (i < j) {
+
+      while (arr[i] <= pivot && i <= high - 1) {
+        i++  ;
+      }
+
+      while (arr[j] > pivot && j >= low) {
+        j-- ;
+      }
+
+      if (i < j){
+        int t = arr[i]  ; 
+        arr[i] = arr[j]  ; 
+        arr[j] = t ; 
+      }
     }
 
-    private static void sort(int arr[],int low,int high)
-    {
-        if(low>=high) return;
+    int t = arr[j]  ; 
+    arr[j] = arr[low]  ; 
+    arr[low] = t ; 
 
-        int s=low;
-        int e=high;
-        int mid=s+(e-s)/2;
-        int pivot=arr[mid];
+    return j ;
+  }
 
-        while(s<=e)
-        {
-            // if no violation happens then s++ otherwise break
-            while(arr[s]<pivot)
-            {
-                s++;
-            }
-            // if no violation happens then s++ otherwise break
-            while(arr[e]>pivot)
-            {
-                e--;
-            }
-        // if violation occurs then swap the arr[s] with arr[e] otherwise s>=e and consition will false
-            if(s<=e)
-            {
-                int temp=arr[s];
-                arr[s]=arr[e];
-                arr[e]=temp;
-                
-                //increase s
-                s++;
-                //decrese e
-                e--;
-            }
-        }
+  static void quicksort(int arr[] , int low, int high){
+    
+    if (low < high) {
 
-        // now pivot is at correct position
-        // So, call the left part of the pivot 
-        sort(arr, low, e);
-
-        //call the right of pivot
-        sort(arr, s, high);
-
+      int pivot = partition(arr, low, high) ;
+      quicksort(arr, low, pivot - 1)  ;
+      quicksort(arr, pivot + 1, high)  ;
+    
     }
+
+  }
+  public static void main(String[] args) {
+    
+    int n=8 ; 
+    int arr[] = {4, 6, 2, 5, 7, 8, 1, 3}  ; 
+    System.out.println("Before Quick Sort: ");
+     for(int i=0; i < n ;i++){
+      System.out.print(arr[i]+" ")  ; 
+    }
+    System.out.println();
+    quicksort(arr,0,n-1)  ; 
+
+    System.out.println("Sorted Array: ") ; 
+    for(int i=0; i < n ;i++){
+      System.out.print(arr[i]+" ")  ; 
+    }
+  }
 }
-
