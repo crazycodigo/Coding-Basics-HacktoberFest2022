@@ -1,0 +1,20 @@
+/* .d-flex{
+    display: flex;
+}
+ */
+
+ :root{
+    --black: #2f3043;
+    --white: white;
+    --red: red;
+ }
+
+ :root{
+    /* --b-red: 2px solid red;
+    --b-blue: 2px solid blue;
+    --b-black: 2px solid black; */
+ }
+
+ :root{
+    --font: "Helvetica","Arial",sans-serif;
+ }

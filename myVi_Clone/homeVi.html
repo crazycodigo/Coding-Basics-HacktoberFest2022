@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.myvi.in/content/dam/vodafoneideadigital/homespyder/Vi-logo.svg" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./homeStyle.css">
+    <title>Vi</title>
+</head>
+<body>
+    <div class="nav-main d-flex justify-content-around ">
+        <div class="nav-left d-flex">
+            <img src="https://www.myvi.in/content/dam/vodafoneideadigital/homespyder/Vi-logo.svg" alt="">
+        </div>
+        <div class="nav-center d-flex">
+            <ul class="nav justify-content-center ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Prepaid</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Postpaid</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New Connection</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">International Roaming</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Smart Phone Offers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Explore</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Help</a>
+                </li> 
+            </ul>
+        </div>
+        <div class="nav-right d-flex">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Buisness</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Investor</a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link active" style="color: red;" aria-current="page" href="#">Sign In**</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="latest d-flex justify-content-center align-items-center">
+        <p >
+            Experience the new Vi app!
+            <a href="#">Download Now</a>
+        </p>
+    </div>
+    <!-- main sections start -->
+    <main>
+      <!-- section-01 -->
+      <section class="container sec-01">
+        <div class="row justify-content-center">
+          <!-- section-01 left -->
+          <div class="col-md-6 sec-01-l">
+            <!-- main head -->
+            <h1 class="sec-l-head">
+              recharge and pay bill
+              <p>
+                for exciting offers
+              </p> 
+            </h1>
+            <!-- radio buttons -->
+            <div class="sec-l-radio d-flex mt-5 fs-5">
+              <div class="form-check">
+                <input class="form-check-input regular-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Prepaid
+                </label>
+              </div>
+              <div class="form-check ms-5">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Postpaid
+                </label>
+              </div>
+            </div>
+            <!-- enter no. -->
+            <div class="input-group mb-3 mt-3">
+              <input type="text" pattern="[1-9]{1}[0-9]{9}" class="form-control rounded-pill p-3" placeholder="Enter mobile number" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+              <!-- issue with input command -->
+              <span class="input-group-btn">
+                <button class="btn btn-outline-secondary rounded-pill p-2" type="button" id="button-addon2">recharge</button>
+              </span>
+            </div>
+            <p>not a Vi user? 
+              <a href="#" style="color: var(--black);" >get Vi SIM</a>
+            delivered free</p>
+          </div>
+
+          <!-- right col -->
+          <!-- img slider -->
+          <div class="col-md-6 sec-01-r pt-2">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/homepage/HeroUL/Web_Hero_Banner.png" class="d-block w-100" alt="1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/homepage/desktop_Music_eDM.png" class="d-block w-100" alt="2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/homepage/P2P_UL_Banner_web.png" class="d-block w-100" alt="3">
+                </div>
+              </div>
+            </div>
+            <!--It lacks control at the bottom of the image  -->
+          </div>
+        </div>
+      </section>
+      <!-- section-02 -->
+      <section class="container sec-02 mtb">
+        <div class="row justify-content-center">
+          <div class="sec-02-list">
+            <!-- i=con not changed of all -->
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/mobileimages/ConsumerHomepage/buy-postpaid-sim.svg" alt="" class="ms-4" >
+                    <p class="fs-5" style="color: var(--black);">Buy Postpaid</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/mobileimages/ConsumerHomepage/buy-postpaid-sim.svg" alt="" class="ms-4" >
+                    <p class="fs-5" style="color: var(--black);">Buy Prepaid</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/mobileimages/ConsumerHomepage/buy-postpaid-sim.svg" alt="" class="ms-5 ps-4" >
+                    <p class="fs-5" style="color: var(--black);">Buy VIP Mobile Number</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/mobileimages/ConsumerHomepage/buy-postpaid-sim.svg" alt="" class="ms-4" >
+                    <p class="fs-5" style="color: var(--black);">Port Number</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/mobileimages/ConsumerHomepage/buy-postpaid-sim.svg" alt="" class="ms-5 ps-3" >
+                    <p class="fs-5" style="color: var(--black);">International Roaming</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/mobileimages/ConsumerHomepage/buy-postpaid-sim.svg" alt="" class="ms-4 ps-3" >
+                    <p class="fs-5" style="color: var(--black);">Help & Support</p>
+                </a>
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- section-00 -->
+      <section class="container sec-03 mtb">
+        <div class="row justify-content-center">
+          <!-- head -->
+          <div class="sec-03-head fs-1 fw-bold justify-content-center d-flex">
+            best seller&nbsp 
+            <a href="#">
+              unlimited plans
+            </a>
+          </div>
+          <!-- cards -->
+          <div class="row main-card">
+            <div class="col-sm-6 sec3-card ">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                  <div class="card-body-01 d-flex justify-content-between">
+                    <h2 class="card-title">₹ 299</h2>
+                    <span class="card-body-img d-flex">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/quick-recharge/m-tv-icon-40x40.png" alt="">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/nontelco/images/hero-ul-circular-tag.svg" alt="">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/quick-recharge/binge-allnight-desk.svg" alt="">
+                    </span>
+                  </div>
+                  <div class="card-body-02 mt-4">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h6 class="fw-bold">Truly Unlimited</h6>
+                        Calls
+                      </div>
+                      <div class="col">
+                        <h6 class="fw-bold">1.5GB/Day</h6>
+                        Data
+                      </div>
+                      <div class="col">
+                        <h6 class="fw-bold">84 Days</h6>
+                        Validity
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body-03 fw-bold mt-4 d-flex justify-content-between">
+                    <a href="#">pack details</a>
+                    <span>
+                      <a href="#" class="cb3-btn btn btn-primary">recharge now</a>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 sec3-card">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                  <div class="card-body-01 d-flex justify-content-between">
+                    <h2 class="card-title">₹ 299</h2>
+                    <span class="card-body-img d-flex">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/quick-recharge/m-tv-icon-40x40.png" alt="">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/nontelco/images/hero-ul-circular-tag.svg" alt="">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/quick-recharge/binge-allnight-desk.svg" alt="">
+                    </span>
+                  </div>
+                  <div class="card-body-02 mt-4">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h6 class="fw-bold">Truly Unlimited</h6>
+                        Calls
+                      </div>
+                      <div class="col">
+                        <h6 class="fw-bold">1.5GB/Day</h6>
+                        Data
+                      </div>
+                      <div class="col">
+                        <h6 class="fw-bold">84 Days</h6>
+                        Validity
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body-03 fw-bold mt-4 d-flex justify-content-between">
+                    <a href="#">pack details</a>
+                    <span>
+                      <a href="#" class="cb3-btn btn btn-primary">recharge now</a>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 sec3-card">
+              <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                  <div class="card-body-01 d-flex justify-content-between">
+                    <h2 class="card-title">₹ 299</h2>
+                    <span class="card-body-img d-flex">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/quick-recharge/m-tv-icon-40x40.png" alt="">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/nontelco/images/hero-ul-circular-tag.svg" alt="">
+                      <img src="https://www.myvi.in/content/dam/vodafoneideadigital/quick-recharge/binge-allnight-desk.svg" alt="">
+                    </span>
+                  </div>
+                  <div class="card-body-02 mt-4">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h6 class="fw-bold">Truly Unlimited</h6>
+                        Calls
+                      </div>
+                      <div class="col">
+                        <h6 class="fw-bold">1.5GB/Day</h6>
+                        Data
+                      </div>
+                      <div class="col">
+                        <h6 class="fw-bold">84 Days</h6>
+                        Validity
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body-03 fw-bold mt-4 d-flex justify-content-between">
+                    <a href="#">pack details</a>
+                    <span>
+                      <a href="#" class="cb3-btn btn btn-primary">recharge now</a>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- browse btn -->
+          <div class=" d-flex col-2">
+            <a href="#">
+              <button class="browse-btn browse-btn-main">
+                browse all packs
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-00 -->
+      <section class="container sec-00">
+        <div class="row justify-content-center">
+          
+        </div>
+      </section>
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
