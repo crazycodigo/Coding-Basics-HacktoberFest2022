@@ -1,0 +1,56 @@
+.videoFooter{
+    position: relative;
+    bottom: 150px;
+    display: flex;
+    color: white;
+    padding: 20px;
+    margin-left: 10px;
+}
+.video__player{
+    background-color: black;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    }
+    .videoFooter__text{
+        flex:1;
+        
+    }
+    .videoFooter__text p{
+        padding-bottom: 20px;
+        
+    }
+    .videoFooter__icon{
+        position: absolute;
+    }
+    .videoFooter__ticker > .ticker{
+        height: fit-content;
+        margin-left: 30px;
+        width: 60%;
+    }
+    .videoFooter__record{
+    animation: spinTheRecord infinite 5s linear;
+    height: 50px;
+    filter: invert(1);
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    }
+    @keyframes spinTheRecord{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .videoFooter__ticker{
+        padding-top: 7px;
+        font-size:17px;
+    }
+    .videoFooter__text > h3 {
+padding-bottom: 20px;
+    }
+    .videoFooter__ticker h1{
+        padding-top: 7px;
+    }
