@@ -1,0 +1,26 @@
+##Logistic Reg
+##Library
+import pandas as pd
+from sklearn.model_selection import train_test_split
+import statsmodels.api as sm
+from sklearn import metrics
+
+#Read Data ( set your file path)
+data = pd.read_csv('logistic_regression_data.csv')
+data.info()
+
+#Dummies
+modeling_data = pd.get_dummies(data, columns=['Dependents'],drop_first=True)
+
+#Dependent & Independent Variable split
+Y = modeling_data['Churn']
+X = modeling_data.drop(['Churn'], axis=1)
+
+#Model Training
+log_reg = sm.Logit(Y.astype(float), X.astype(float)).fit()
+print(log_reg.summary())
+
+Y_pred = log_reg.predict(X)
+Predicted_Churn = [1 if x > 0.5 else 0 for x in Y_pred]
+
+print(metrics.classification_report(Y, Predicted_Churn))
