@@ -1,0 +1,52 @@
+require(caret)
+require(randomForest)
+data <- read.csv(file="data_1.csv", header=T)
+str(data)
+data$ admit <- as.factor(data$admit)
+str(data)
+set.seed(123)
+ind <- sample(1:nrow(data), round(0.70*nrow(data)))
+train <- as.data.frame(data[ind, ])
+str(train)
+var_names <- names(data)
+var_names
+formula = as.formula(paste("admit ~", paste(var_names[!var_names %in% "admit"], collapse = " + 
+")))
+rf_train_model <- randomForest(formula, data = train, ntree = 500, mtry = 2, nodesize = 5, 
+importance=T)
+print(rf_train_model)
+jpeg('var_importance.jpg')
+impVar <- round(randomForest::importance(rf_train_model), 2)
+impVar[order(impVar[,3], decreasing=TRUE),]
+varImpPlot <- varImpPlot(rf_train_model, sort = TRUE, main = "Var Impoirance", n.var=4)
+rf_train_model
+tRF<- tuneRF(x = train[,2:4], y = as.factor(train$admit), mtryStart = 1, ntreeTry = 500, stepFactor = 
+0.5, improve = 0.001, trace = TRUE, plot = TRUE, doBest = TRUE, nodesize = 5, importance = TRUE 
+)
+train$predict.class <- predict(tRF, train, type = "class", na.action = na.omit)
+train$predict.score <- predict(tRF, train, type = "prob")
+head(train)
+class(train$predict.score)
+require(ROCR)
+jpeg('RF_training_AUC.jpg')
+pred <- prediction(train$predict.score[,2], train$admit)
+perf <- performance(pred, "tpr", "fpr")
+plot( perf, colorize=TRUE, lwd=1, main="RF ROC Curve for training", print.cutoffs.at=seq(0, 1, 
+by=0.05), text.adj=c(-0.5, 0.5), text.cex=0.5)
+dev.off()
+KS <- max(attr(perf, 'y.values')[[1]]-attr(perf, 'x.values')[[1]])
+auc <- performance(pred,"auc");
+auc <- as.numeric(auc@y.values)
+require(e1071)
+conf_matrix_rf_train <- confusionMatrix(data = train$predict.class, reference=train$admit)
+conf_matrix_rf_train
+test$predict.class <- predict(tRF, test, type="class")
+test$predict.score <- predict(tRF, test, type="prob")
+conf_matrix_rf_test <- confusionMatrix(data = test$predict.class, reference=test$admit)
+conf_matrix_rf_test
+jpeg('RF_internal_test_AUC.jpg')
+pred1 <- prediction(test$predict.score[,2], test$admit)
+perf1 <- performance(pred1, "tpr", "fpr")
+plot( perf1, colorize=TRUE, lwd=1, main="RF ROC Curve for internal test", print.cutoffs.at=seq(0, 1, 
+by=0.05), text.adj=c(-0.5, 0.5), text.cex=0.5)
+dev.off()
