@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    z-index: 10;
+    background-color: #4414f3;
+}
+header .logo{
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+header .navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+header .navigation li{
+    display: flex;
+    margin: 0 10px;
+}
+header .navigation li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+header .navigation li a:hover{
+    color: rgb(231, 74, 12);
+}
+header .search{
+    position: relative;
+    width: 300px;
+    height: 30px;
+}
+header .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 0 10px 0 45px;
+}
+header .search input::placeholder{
+    color: #fff;
+}
+header .search .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #fff;
+    border-right: 2px solid #fff;
+}
+.banner{
+    background: #b3aaaa;
+    padding: 100px 100px 100px;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.banner .content{
+    max-width: 700px;
+}
+.banner .content h2{
+    font-size: 3em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+.banner .content a{
+    display: inline-block;
+    background: #fff;
+    color: #4414f3;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.banner .image{
+    display: flex;
+    width: 30rem;
+    margin-left: 10px;
+}
+@media (max-width: 991px){
+    header{
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+    .banner{
+        padding: 150px 20px 50px;
+        flex-direction: column-reverse;
+    }
+    .banner .image {
+        margin-left: 0;
+        width: auto;
+    }
+    .banner .content h2 {
+        font-size: 2em;
+    }
+}
+@media (max-width: 600px){
+    header .search {
+        width: 300px;
+    }
+    .banner .image {
+        margin-left: 0;
+        max-width: 80%;
+        margin-top: 10px;
+    }
+}
