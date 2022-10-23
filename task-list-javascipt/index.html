@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script 
+    defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous">
+    </script>
+    <title>Task list</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div id="main" class="card">
+                    <div class="card-content">
+                        <span class="card-title">Task list</span>
+                        <div class="row">
+                            <form action="submit" id="task-form">
+                                <div class="input-field col s12">
+                                    <input type="text" name="task" id="task">
+                                    <label for="task">New task</label>
+                                </div>
+                                <input type="submit" value="Add Task" class="btn">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <h5 class="task-title">Tasks</h5>
+                        <div class="input-field col s12">
+                            <input type="text" name="filter" id="filter">
+                            <label for="filter">Filter Tasks</label>
+                        </div>
+                        <ul class="collection"></ul>
+                        <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
